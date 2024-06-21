@@ -2,8 +2,15 @@
     margin: 0;
 }
 
+body, header, #items, h2, h3, #contents{
+    display: flex;
+}
+
+body{
+    flex-direction: column;
+}
+
 header{
-    display: flex; 
     background-color:whitesmoke;
 }
 
@@ -12,10 +19,30 @@ header{
     padding: 15px 30px;
 }
 
-nav{
-    display: flex;
-}
-
 #item1, #item2, #item3, #item4{
     padding: 15px 60px 0 15px;
+}
+
+h2, h3, #contents{
+    justify-content: center;
+}
+
+h2{
+    padding: 12vh 0;
+    background-color: #cedcec;
+}
+
+h3{
+    padding: 3vh 0;
+}
+
+#contents{
+    flex-wrap: wrap;
+    height: 40vh;
+}
+
+#content1, #content2, #content3, #content4{
+    margin: 8px;
+    padding: 0 15vw;
+    background-color: #8a98a7;
 }
