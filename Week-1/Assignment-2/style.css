@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+}
+
+header{
+    display: flex; 
+    background-color:whitesmoke;
+}
+
+#title{
+    margin-right: auto;
+    padding: 15px 30px;
+}
+
+nav{
+    display: flex;
+}
+
+#item1, #item2, #item3, #item4{
+    padding: 15px 60px 0 15px;
+}
