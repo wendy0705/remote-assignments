@@ -1,8 +1,13 @@
 * {
     margin: 0;
+    padding: 0;
 }
 
-body, header, #items, h2, h3, #contents{
+html, body{
+    height: 100%;
+}
+
+body, header, #items, h2, h3, #contents, #action, footer{
     display: flex;
 }
 
@@ -43,6 +48,16 @@ h3{
 
 #content1, #content2, #content3, #content4{
     margin: 8px;
-    padding: 0 15vw;
+    height: 120px;
+    padding: 10px 200px;
     background-color: #8a98a7;
+}
+
+footer{
+    margin: auto;
+}
+
+#action{
+    padding: 15px 10px;
+    background-color: #cedcec;
 }
