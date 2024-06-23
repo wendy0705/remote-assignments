@@ -11,7 +11,7 @@ header{
     background-color:white;
 }
 
-body, header, #functions, #div-gemini, #div-google, #div-hello{
+body, header, #functions, #div-gemini, #div-google, #div-interest{
     display: flex;
 }
 
@@ -90,13 +90,10 @@ button {
 
 #div-interest{
     background-color: #f1f3f4;
-    width: 100vw;
     height: 50vh;
-    z-index: 1;
-    position: absolute;
 }
 
 #interest{
-    margin-top: 60em;
+
 }
 
