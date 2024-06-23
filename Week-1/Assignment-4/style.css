@@ -108,6 +108,7 @@ body, header, #functions, #div-gemini, #div-google, #div-selectinterest{
     margin-left: 2em;
     overflow-x: auto;
     white-space: nowrap;
+    scrollbar-width: none;
 }
 
 #div-buttons button{
