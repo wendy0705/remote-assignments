@@ -4,6 +4,10 @@ body{
     flex-direction: column;
 }
 
+#firstpage, #div-hello{
+    flex-direction: column;
+}
+
 header{
     right: 0;
     left: 0; 
@@ -11,14 +15,14 @@ header{
     background-color:white;
 }
 
-body, header, #functions, #div-gemini, #div-google{
+body, #firstpage, header, #functions, #div-gemini, #div-google, #div-hello{
     display: flex;
 }
 
 #title, #function1, #function2, #function3, #function4, #function5, #function6, #function7, #search, #language{
     margin-bottom: 0.5em;
     color: #5f6367;
-}
+} 
 
 #title{
     margin-top: 0.5em;
@@ -63,7 +67,7 @@ body, header, #functions, #div-gemini, #div-google{
 
 #div-google{
     margin-bottom: auto;
-    background-color: #f1f3f4;
+    background-color: #eeeeee;
 }
 
 #google{
@@ -87,3 +91,16 @@ button {
     font-size: 20px;
     border-radius: 30px;
   }
+
+#div-hello{
+    background-color: #f1f3f4;
+    width: 100vw;
+    height: 150vh;
+    z-index: -2;
+    position: absolute;
+}
+
+#hello{
+    margin-top: 60em;
+}
+
