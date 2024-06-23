@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+}
+
+header, #functions{
+    display: flex;
+}
+
+
+#title{
+    margin-top: 0.5em;
+}
+
+#title{
+    margin-left: 2em;
+    margin-right: 3em;
+}
+
+#function1, #function2, #function3, #function4, #function5, #function6, #function7{
+    margin-top: 1.2em;
+    padding: 0 2em;
+}
+
+#search, #language{
+    margin-top: 0.8em;
+    margin-left: 5em;
+}
