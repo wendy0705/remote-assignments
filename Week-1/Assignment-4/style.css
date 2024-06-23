@@ -14,11 +14,12 @@ body, header, #functions, #div-gemini{
     display: flex;
 }
 
-#title{
-    margin-top: 0.5em;
+#title, #function1, #function2, #function3, #function4, #function5, #function6, #function7, #search, #language{
+    margin-bottom: 0.5em;
 }
 
 #title{
+    margin-top: 0.5em;
     margin-left: 2em;
     margin-right: 3em;
 }
@@ -28,9 +29,18 @@ body, header, #functions, #div-gemini{
     padding: 0 2em;
 }
 
-#search, #language{
-    margin-top: 0.8em;
+#search{
+    margin-top: 0.6em;
     margin-left: 5em;
+    padding:0.4em 7em 0.4em 1em;
+    background-color: #f1f3f4;
+}
+
+#language{
+    margin-top: 0.8em;
+    margin-left: 2em;
+    padding: 0.2em 1em;
+    border-style: solid;
 }
 
 #div-gemini{
