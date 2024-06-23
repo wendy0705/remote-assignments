@@ -11,7 +11,7 @@ header{
     background-color:white;
 }
 
-body, header, #functions, #div-gemini, #div-google, #div-selectinterest{
+body, header, #functions, #div-gemini, #div-google, #div-selectinterest, #div-products{
     display: flex;
 }
 
@@ -119,6 +119,21 @@ body, header, #functions, #div-gemini, #div-google, #div-selectinterest{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
-    border-radius: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.div-product{
+    width: 20em;
+    height: 15em;
+    margin-top: 1em;
+    margin-left: 2em;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid gainsboro;
+}
+
+.product, .pname, .intro{
+    margin-left: 1em;
+    margin-right: 1em;
 }
