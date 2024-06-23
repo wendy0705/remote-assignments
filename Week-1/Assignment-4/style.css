@@ -1,11 +1,18 @@
 body{
     margin: 0;
+    flex-direction: column;
 }
 
-header, #functions{
+header{
+    right: 0;
+    left: 0; 
+    position: fixed;
+    background-color:white;
+}
+
+body, header, #functions, #div-gemini{
     display: flex;
 }
-
 
 #title{
     margin-top: 0.5em;
@@ -24,4 +31,15 @@ header, #functions{
 #search, #language{
     margin-top: 0.8em;
     margin-left: 5em;
+}
+
+#div-gemini{
+    background-color: #1c73e8;
+    z-index : -1;
+}
+
+#gemini{
+    color: white;
+    margin: 5em auto 1.5em;
+    /* background-color: #1c73e8; */
 }
