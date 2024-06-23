@@ -11,7 +11,7 @@ header{
     background-color:white;
 }
 
-body, header, #functions, #div-gemini, #div-google, #div-interest{
+body, header, #functions, #div-gemini, #div-google, #div-selectinterest{
     display: flex;
 }
 
@@ -76,7 +76,7 @@ body, header, #functions, #div-gemini, #div-google, #div-interest{
     margin: 0;
 }
 
-button {
+#demand {
     background-color: #1c73e8;
     border: none;
     color: white;
@@ -90,10 +90,34 @@ button {
 
 #div-interest{
     background-color: #f1f3f4;
-    height: 50vh;
+    height: 56vh;
 }
 
 #interest{
-
+    margin: 3em 2em;
+    margin-right: auto;
+    color: #5f6367;
 }
 
+#createaccount{
+    margin: 3em 4em;
+    color: #1c73e8;
+}
+
+#div-buttons{
+    margin-left: 2em;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#div-buttons button{
+    background-color: white;
+    border: 1px solid gainsboro;
+    color: black;
+    padding: 8px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 10px;
+}
