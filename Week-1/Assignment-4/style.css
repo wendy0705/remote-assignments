@@ -88,7 +88,7 @@ button {
     border-radius: 30px;
   }
 
-#div-hello{
+#div-interest{
     background-color: #f1f3f4;
     width: 100vw;
     height: 50vh;
@@ -96,7 +96,7 @@ button {
     position: absolute;
 }
 
-#hello{
+#interest{
     margin-top: 60em;
 }
 
