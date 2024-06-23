@@ -16,6 +16,7 @@ body, header, #functions, #div-gemini{
 
 #title, #function1, #function2, #function3, #function4, #function5, #function6, #function7, #search, #language{
     margin-bottom: 0.5em;
+    color: #5f6367;
 }
 
 #title{
