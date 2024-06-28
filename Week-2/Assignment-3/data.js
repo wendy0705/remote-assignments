@@ -42,7 +42,35 @@ console.log(count(input1));
 
 function groupByKey(input) {
     // your code here
+    let output = [{
+        key: 'a',
+        value: 0
+    },
+    {
+        key: 'b',
+        value: 0
+    },
+    {
+        key: 'c',
+        value: 0
+    }];
 
+    for(let i = 0; i < input.length; i++){
+        if(input[i].key === 'a'){
+            output[0].value += input[i].value;
+        }else if(input[i].key === 'b'){
+            output[1].value += input[i].value;
+        }else if(input[i].key === 'c'){
+            output[2].value += input[i].value;
+        }
+    }
+
+    const alpcount = output.reduce((alpcount, num) => {
+        alpcount[num.key] = num.value;
+        return alpcount;
+    },{});
+
+    return alpcount;
 }
 
 let input2 = [
