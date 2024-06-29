@@ -39,14 +39,10 @@ h3{
     padding: 1em 0;
 }
 
-.contents{
-    margin: 0 0 2em;
-}
-
 .div-contents{
     flex-wrap: wrap; 
     width: 79vw;
-    height: 30vh;
+    height: 35vh;
 }
 
 .div-content1, .div-content2, .div-content3, .div-content4{
@@ -61,11 +57,11 @@ h3{
 }
 
 #contents, #contents2{
-    height: 265px;
+    height: 35vh;
 }
 
 footer{
-    margin: 10px auto;
+    margin: auto;
 }
 
 #action{
