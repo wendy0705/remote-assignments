@@ -1,3 +1,4 @@
+
 body {
 	margin: 0;
     flex-direction: column;
@@ -5,6 +6,10 @@ body {
 
 header{
     background-color:whitesmoke;
+}
+
+body, header, #items, h2, h3, #contents, #contents2, #action, footer, .div-contents{
+    display: flex;
 }
 
 #title{
@@ -34,19 +39,33 @@ h3{
     padding: 1em 0;
 }
 
-#contents, #contents2{
-    flex-wrap: wrap; 
+.contents{
+    margin: 0 0 2em;
 }
 
-.content1, .content2, .content3, .content4{
+.div-contents{
+    flex-wrap: wrap; 
+    width: 79vw;
+    height: 30vh;
+}
+
+.div-content1, .div-content2, .div-content3, .div-content4{
+    width: 48%;
+    height: 50%;
     margin: 8px;
-    padding: 100px 200px;
-    padding-top: 5px;
     background-color: #8a98a7;
 }
 
+.content1, .content2, .content3, .content4{
+    margin: 1em;
+}
+
+#contents, #contents2{
+    height: 265px;
+}
+
 footer{
-    margin: 5px auto;
+    margin: 10px auto;
 }
 
 #action{
@@ -63,8 +82,13 @@ footer{
     display: none;
 }
 
-@media screen and (min-width: 1200px){
-    body, header, #items, h2, h3, #contents, #action, footer{
-        display: flex;
+@media screen and (min-width: 1200px) {
+    .div-content1, .div-content2, .div-content3, .div-content4 {
+        width: 454.656px;  
+        height: 124px;
+    }
+
+    .div-contents{
+        justify-content: center;
     }
 }
