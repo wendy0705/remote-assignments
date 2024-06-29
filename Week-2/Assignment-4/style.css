@@ -26,7 +26,7 @@ body, header, #items, h2, h3, #contents, #contents2, #action, footer, .div-conte
     margin-bottom: 0;
 }
 
-h2, h3, #contents, #contents2{
+h2, h3, #contents, #contents2, .content1, .content2, .content3, .content4{
     justify-content: center;
 }
 
@@ -57,7 +57,7 @@ h3{
 }
 
 .content1, .content2, .content3, .content4{
-    margin: 1em;
+    margin: 1em 10em;
 }
 
 #contents, #contents2{
