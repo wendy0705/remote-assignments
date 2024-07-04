@@ -8,13 +8,12 @@ import org.springframework.http.HttpStatus;
 @RequestMapping
 public class DataController{
 
-    @GetMapping(path = "/getData")
+    @GetMapping(path = "/data")
     public String getData(@RequestParam(value = "number", required = false) Integer n) {
 
         if (n == null) {
             return "Lack of Parameter";
-        }
-        else {
+        } else {
             int sum = 0;
             for (int i = 1; i <= n; i++) {
                 sum += i;
@@ -24,8 +23,7 @@ public class DataController{
         }
     }
 
-    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(RuntimeException.class)
     public String handleTypeMismatch() {
         return "Wrong Parameter";
     }
