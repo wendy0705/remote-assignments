@@ -18,7 +18,7 @@ public class DataController{
             for (int i = 1; i <= n; i++) {
                 sum += i;
             }
-            if(n > 1000363) return "Too Large";
+            if(n > 1000363) return "Too Large";//when n > 1000363, 1+2+...+1000363 will larger than max integer which is 2147483647
             return Integer.toString(sum);
         }
     }
