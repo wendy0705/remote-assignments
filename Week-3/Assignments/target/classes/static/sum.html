@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                document.getElementById("result").innerHTML = xhr.responseText;
+            }//where I gonna place my result
+        }
+
+        function getResult() {
+            let number = document.getElementById('numberInput').value;//get the input
+            xhr.open('GET', `/data?number=${number}`);
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter a Number</h1>
+    <input type="number" id="numberInput" />
+    <button onclick="getResult()">Get Result</button>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let xhr = new XMLHttpRequest();
+        function addCookie() {
+            let name = document.getElementById('nameInput').value; // 获取输入框的值
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        window.location.href = `/myName`;
+                    }
+                }
+            };
+            xhr.open('POST', '/trackName');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send(`name=${encodeURIComponent(name)}`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Please enter your name:</h1>
+    <input type='text' id='nameInput'/>
+    <button type='submit' onclick="addCookie()">Submit</button>
+</body>
+</html>
