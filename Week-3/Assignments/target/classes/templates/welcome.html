@@ -6,7 +6,7 @@
     <script>
         let xhr = new XMLHttpRequest();
         function addCookie() {
-            let name = document.getElementById('nameInput').value; // 获取输入框的值
+            let name = document.getElementById('nameInput').value;
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4) {
                     if (xhr.status === 200) {

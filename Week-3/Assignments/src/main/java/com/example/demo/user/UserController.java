@@ -25,7 +25,8 @@ public class UserController {
 
     @PostMapping("/trackName")
     public ResponseEntity<Void> setCookie(@RequestParam(value = "name", required = false) String name, HttpServletResponse response) {
-        ResponseCookie springCookie = ResponseCookie.from("user-id", name)
+
+        ResponseCookie springCookie = ResponseCookie.from("user-id", name)//(cookie's name, cookie's value)
                 .httpOnly(true)
                 .secure(false)
                 .path("/")
