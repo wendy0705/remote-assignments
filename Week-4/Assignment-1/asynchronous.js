@@ -21,7 +21,7 @@ function delayedResultPromise(n1, n2, delayTime) {
     // your code here
    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if(n1+n2) {
+            if(n1 + n2) {
                 resolve(n1 + n2);
             }else{
                 reject("something wrong");

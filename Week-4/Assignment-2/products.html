@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function ajax(src, callback) {//turn src to useful data
+            // your code here
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4){
+                    if(xhr.status === 200) {
+                        let jsonResponse = JSON.parse(xhr.responseText);
+                        callback(jsonResponse);
+                    }
+                }
+            };
+            xhr.open('GET', src, true);
+            xhr.send();
+        }
+
+        function render(data) {
+            // your code here
+            // document.createElement() and appendChild() methods are preferred.
+            const container = document.createElement("div");
+
+            data.forEach(product => {
+                const productDiv = document.createElement("div");//each product's div
+
+                for (const [key, value] of Object.entries(product)) {
+                    const element = document.createElement("div");//product's property
+                    element.innerText = `${key}: ${value}`;
+                    productDiv.appendChild(element);
+                }
+                container.appendChild(productDiv);
+            });
+            document.querySelector('body').appendChild(container);
+        }
+
+        ajax('https://remote-assignment.s3.ap-northeast-1.amazonaws.com/products', function (response) {
+                render(response);
+            }
+        );
+    </script>
 </head>
 <body>
-$END$
 </body>
 </html>
