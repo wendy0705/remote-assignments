@@ -36,7 +36,8 @@ public class UserController {
 
         response.addHeader(HttpHeaders.SET_COOKIE, springCookie.toString());
 
-        return ResponseEntity.status(302).header(HttpHeaders.LOCATION, "/myName").build();
+        return ResponseEntity.ok().build();
+//        return ResponseEntity.status(302).header(HttpHeaders.LOCATION, "/myName").build();
     }
 
 }
