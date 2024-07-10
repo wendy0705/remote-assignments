@@ -24,12 +24,7 @@ public class UserController {
 
     @GetMapping("/member")
     public String success() {
-        return "success";
-    }
-
-    @GetMapping("/success")
-    public String successPage() {
-        return "success";
+        return "member";
     }
 
     @PostMapping("/signin")
