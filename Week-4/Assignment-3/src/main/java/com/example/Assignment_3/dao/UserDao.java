@@ -15,9 +15,7 @@ import java.sql.*;
 public class UserDao implements UserService {
 
     @Autowired
-//    private User user;
     private JdbcTemplate jdbcTemplate;
-    //    private String sql;
 
     @Override
     public Boolean checkMemberByEmailandPassword(String email, String password) {
