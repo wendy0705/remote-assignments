@@ -1,7 +1,7 @@
 package com.example.Assignment_3.controller;
 
 import com.example.Assignment_3.entity.User;
-import com.example.Assignment_3.service.UserService;
+import com.example.Assignment_3.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class UserController {
 
     @Autowired
-    private UserService userService;
+    private UserDao userDao;
 
     @GetMapping("/")
     public String sign() {
@@ -29,7 +29,7 @@ public class UserController {
 
     @PostMapping("/signin")
     public ResponseEntity<String> login(@RequestParam String email, @RequestParam String password) {
-        if (userService.checkMemberByEmailandPassword(email, password)) {
+        if (userDao.checkMemberByEmailandPassword(email, password)) {
 //            System.out.println("turn to success page");
             return ResponseEntity.ok().build();//turn to success page
         } else {
@@ -39,8 +39,8 @@ public class UserController {
 
     @PostMapping("/signup")
     public ResponseEntity<String> signup(@RequestParam String email, @RequestParam String password) {
-        if (!userService.checkMemberByEmail(email)) {
-            userService.createUser(new User(email, password));//add user to database
+        if (!userDao.checkMemberByEmail(email)) {
+            userDao.createUser(new User(email, password));//add user to database
 //            System.out.println("add user to database");
             return ResponseEntity.ok().build();//turn to success page
         } else {
