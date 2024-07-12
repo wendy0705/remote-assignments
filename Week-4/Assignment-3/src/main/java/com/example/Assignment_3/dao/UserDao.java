@@ -9,4 +9,5 @@ public interface UserDao {
     Boolean checkMemberByEmail(String email);
 
     void createUser(User user);
+
 }
