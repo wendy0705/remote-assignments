@@ -2,17 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Product List</title>
+    <style>
+        .container {
+            margin: 5em;
+            padding: 1em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product {
+            margin: 2em;
+            padding: 1em;
+            border-bottom: 1px solid #ccc;
+        }
+
+    </style>
     <script>
-        function ajax(src, callback) {//turn src to useful data
-            // your code here
+        function ajax(src, callback) {
             let xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4){
-                    if(xhr.status === 200) {
-                        let jsonResponse = JSON.parse(xhr.responseText);
-                        callback(jsonResponse);
-                    }
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    let jsonResponse = JSON.parse(xhr.responseText);
+                    callback(jsonResponse);
                 }
             };
             xhr.open('GET', src, true);
@@ -20,27 +31,38 @@
         }
 
         function render(data) {
-            // your code here
-            // document.createElement() and appendChild() methods are preferred.
             const container = document.createElement("div");
+            container.className = "container";
 
             data.forEach(product => {
-                const productDiv = document.createElement("div");//each product's div
+                const productDiv = document.createElement("div");
+                productDiv.className = "product";
 
-                for (const [key, value] of Object.entries(product)) {
-                    const element = document.createElement("div");//product's property
-                    element.innerText = `${key}: ${value}`;
-                    productDiv.appendChild(element);
-                }
+                const titleDiv = document.createElement("div");
+                titleDiv.className = "product-title";
+                titleDiv.innerText = `${product.name}`;
+                productDiv.appendChild(titleDiv);
+
+                const priceDiv = document.createElement("div");
+                priceDiv.className = "product-price";
+                priceDiv.innerText = `$${product.price}`;
+                productDiv.appendChild(priceDiv);
+
+                const descriptionDiv = document.createElement("div");
+                descriptionDiv.innerText = `${product.description}`;
+                productDiv.appendChild(descriptionDiv);
+
                 container.appendChild(productDiv);
             });
-            document.querySelector('body').appendChild(container);
+
+            document.body.appendChild(container);
         }
 
-        ajax('https://remote-assignment.s3.ap-northeast-1.amazonaws.com/products', function (response) {
+        window.onload = function () {
+            ajax('https://remote-assignment.s3.ap-northeast-1.amazonaws.com/products', function (response) {
                 render(response);
-            }
-        );
+            });
+        };
     </script>
 </head>
 <body>
