@@ -3,6 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        div {
+            margin: 5em;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .div-input {
+            margin: 1em;
+        }
+
+        #sign-button {
+            margin: 0;
+        }
+
+        .div-all {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
     <script>
         let xhr = new XMLHttpRequest();
 
@@ -46,14 +66,17 @@
     </script>
 </head>
 <body>
-<p>email: </p>
-<input type='text' id='email'/>
-<p>password: </p>
-<input type='text' id='password'/>
-<div id="sign-button">
-    <button type='submit' onclick="signIn()">Sign In</button>
-    <button type='submit' onclick="signUp()">Sign Up</button>
+<div class='div-all'>
+    <div class='div-input'>
+        <p>Email</p>
+        <input type='text' id='email'/>
+        <p>Password</p>
+        <input type='text' id='password'/>
+    </div>
+    <div id="sign-button">
+        <button type='submit' onclick="signIn()">Sign In</button>
+        <button type='submit' onclick="signUp()">Sign Up</button>
+    </div>
 </div>
-<div id="message"></div>
 </body>
 </html>
