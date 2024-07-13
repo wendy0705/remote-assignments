@@ -1,9 +1,5 @@
 package com.example.Assignment_3.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
 //Because no @Table annotation exists, it is assumed that this entity is mapped
 // to a table named User.
